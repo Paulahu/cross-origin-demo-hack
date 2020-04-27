@@ -1,5 +1,12 @@
 function jsonp() {
     return new Promise((resolve, reject) => {
+
+        //拿到数据后还可以对数据进行操作
+        // window.xxx = (data) => { //这就是跨域名的回调
+        //     console.log(data) // 请求qq.com:8888/friends.js后再使用这个函数
+        // }
+
+        //将xxx变成一个随机数
         const random = 'paulaJSONPCallbackName' + Math.random()
         window[random] = () => {
             resolve(data) //如果成功执行resolve'
